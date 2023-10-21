@@ -53,3 +53,4 @@ notas:
 En este archivo excel estan algunas pruebas documentadas https://github.com/LucianoTT/ProyectoFinalPythonCoderHouse_TorresTonkowicz/blob/main/Pruebas%20Proyecto%20Python%20Codehouse.xlsx
 
 ## Video Demostración
+https://youtu.be/LPtX2p_U-v8
