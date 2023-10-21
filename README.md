@@ -17,32 +17,39 @@ Los usuarios podrán realizar las siguiente funciones:
 - Datos como tu contraseña, username, mail y redes sociales.
 - Crear publicaciones de blog, editarlas o borrarlas.
 - Comentar en las publicaciones de otras personas.
-- Capacidad de manejar los usuarios(y sus datos), blogs publicados y sus comentarios desde el admin
+- Capacidad de manejar los usuarios(y sus datos), blogs publicados y sus comentarios desde el admin.
 
 notas:
-- la opcion de editar o borrar publicaciones solo esta permitido para el autor o desde la pagina del admin
+- La opción de editar o borrar publicaciones solo está permitido para el autor o desde la página del admin.
+- El navegador que yo utilice para probar fue Google Chrome en modo incógnito.
 
 ## Tecnología Utilizada
 
 ##### Front-End
-- HTML 5
-- CSS 3
-- Javascript ES6
-- Bootstrap 5.2
+- HTML 
+- CSS 
+- Javascript 
+- Bootstrap 
 
 ##### Back-End
-- Python 3.10.4
-- Django 4.0
+- Python 3.11.4
+- Django 4.2.5
 
 ### Pasos para el testeo
 - Descargar o clonar el repositorio en tu PC.
 - Abrirlo con VisualStudioCode.
 - Ubicarse en la carpeta de blog con la funcion "cd" y iniciar el servidor con python manage.py runserver.
-- Cambiar en el settings la opcion de DEBUG a False sino no se veran la mayoria de las cosas.
+- Abrir un navegador en modo incógnito y escribir este sitio web http://127.0.0.1:8000/
 - Crear una cuenta tocando el dropdown arriba a la derecha donde dice "Guest" y luego register.
-- Luego hacer login con los datos correctos
-- En la pagina de blogs se podra crear una nueva publicacion o publicar comentarios en lo ya publicado.
+- Luego hacer login con los datos correctos.
+- En la página de blogs se podrá crear una nueva publicación o publicar comentarios en lo ya publicado.
+- Arriba a la derecha donde antes estaba "Guest" ahora saldrá tu nombre de usuario en el dropdown, al tocarlo aparecerán opciones.
+- Podrás editar tu perfil con avatar, descripción, username y redes sociales. También en la otra opción podrás cambiar tu password.
+- Para probar el admin se deberá crear un super user en visualstudiocode escribiendo en consola python manage.py createsuperuser
+- Luego deberás escribir este link http://127.0.0.1:8000/admin/ en el cual te logearas con el superuser creado antes.
+- Acá aparecerán varias categorías en las que podrás manejar a los usuarios registrados, sus perfiles(avatar), los blogs comentados y sus comentarios.
 
 ## Pruebas Realizadas
+En este archivo excel estan algunas pruebas documentadas https://github.com/LucianoTT/ProyectoFinalPythonCoderHouse_TorresTonkowicz/blob/main/Pruebas%20Proyecto%20Python%20Codehouse.xlsx
 
 ## Video Demostración
