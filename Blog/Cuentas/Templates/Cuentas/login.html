@@ -1,0 +1,28 @@
+{% extends "main/base.html" %}
+{% load static %}
+{% block login %}
+<!--html para el login de las cuentas registradas-->
+<div class="card mx-auto" style="width: 15rem;">
+    <div class="row my-3 p-3 mx-auto">
+        <div class="form-content">
+        <form action="" method="POST">
+            {% csrf_token %}
+            <div class="form-row">
+                <div class="col-md-5">
+                    <div class="form-group">
+                        <label class="h5" "small mb-1">Username:</label>
+                            {{ form.username}}
+                        <label class="h5" "small mb-1">Password:</label>
+                            {{ form.password}}
+                    </div>
+                </div>
+            </div>
+                <button type="submit" class="btn btn-success btn-block">Login</button>
+                {% if form.errors %}
+                <p>WRONG USER/PASS</p>
+                {% endif %}
+        </form>
+      </div>
+    </div>
+</div>
+{% endblock %}

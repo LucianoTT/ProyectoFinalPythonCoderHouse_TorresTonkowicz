@@ -1,0 +1,36 @@
+{% extends "main/base.html" %}
+{% block Publicaciones %}
+<!--html que lista todas las publicaciones en el front sacados desde la DB -->
+<style>
+  body {
+      font-family: "Roboto", sans-serif;
+      font-size: 18px;
+      background-color: #fdfdfd;
+  }
+  .card {
+      box-shadow: 0 16px 48px 000000
+      ;
+  }
+</style>
+</header>
+<div class="container">
+  <div class="row">
+      <div class="col-md-8 mt-3 left">
+          {% for post in publicacion_model_list %}
+            <div class="card mb-4">
+              <div class="card-body">
+                  <h2 class="card-title">{{ post.title }}</h2>
+                  <p class="card-text text-muted h6">{{ post.author }} | {{ post.publication_date}} </p>
+                  <p class="card-text">{{post.body|slice:":200" }}</p>
+                  <a href="{% url 'Blog_Post' post.slug %}" class="btn btn-success">Leer mas &rarr;</a>
+              </div>
+            </div>
+          {% endfor %}
+      </div>
+  </div>
+  <p></p>
+  {% if request.user.is_authenticated %}
+  <a class="btn btn-success" href="nueva_publicacion/">Nueva Publicacion</a>
+  {% endif %}
+</div>
+{%endblock%}

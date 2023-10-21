@@ -1,0 +1,34 @@
+{% extends "main/base.html" %}
+{% load static %}
+{% block about %}
+      <!-- html sobre about me --> 
+      <div class="about_section layout_padding">
+         <div class="container">
+            <div class="row">
+               <div class="col-lg-8 col-sm-12">
+                  <div class="about_img"><img src="{% static 'assets/images/about.jpg' %}"></div>
+                  <h2 class="most_text">Proyecto Final Coder House - Python</h2>
+                  <p class="lorem_text">Esta página web es un blog sobre estar en forma y todas las actividades relacionadas con ello. Los usuarios podrán realizar las siguiente funciones:</p>
+                     <ul>
+                        <li>- Registrarse y hacer login.</li>
+                        <li>- La capacidad de editar tu avatar y otros datos.</li>
+                        <li>- Datos como tu contraseña, username, mail y redes sociales.</li>
+                        <li>- Crear publicaciones de blog, editarlas o borrarlas.</li>
+                        <li>- Comentar en las publicaciones de otras personas.</li>
+                     </ul>
+               </div>
+               <div class="col-lg-4 col-sm-12">
+                     <div><img class="border rounded-circle account-img" src="{% static 'assets/images/perfil.jpg' %}"></div>
+                  <h1 class="about_taital">Sobre mi!</h1>
+                  <p class="about_text">Hola! Mi nombre es Luciano y actualmente estoy aprendiendo el lenguaje de programación Python y el Framework Django.</p>
+                  <div class="social_icon_main">
+                     <div class="social_icon">
+                        <ul>
+                           <li><a href="https://github.com/LucianoTT" target="_blank"><img src="{% static 'assets/images/github.png' %}"></a></li>
+                        </ul>
+                     </div>
+               </div>
+            </div>
+         </div>
+      </div>
+{% endblock %}

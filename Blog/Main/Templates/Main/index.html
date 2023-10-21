@@ -1,0 +1,40 @@
+{% extends "main/base.html" %}
+{% load static %}
+{% block index %}
+         <div class="container-fluid">
+            <div class="banner_section layout_padding">
+               <h1 class="banner_taital">welcome <br>to my blog</h1>
+               <div id="my_slider" class="carousel slide" data-ride="carousel">
+                  <div class="carousel-inner">
+                     <div class="carousel-item active">
+                        <div class="image_main">
+                           <div class="container">
+                              <img src="{% static 'assets/images/basic1.jpg' %}"class="image_1">
+                           </div>
+                        </div>
+                     </div>
+                     <div class="carousel-item">
+                        <div class="image_main">
+                           <div class="container">
+                              <img src="{% static 'assets/images/basic2.jpg' %}" class="image_1">
+                           </div>
+                        </div>
+                     </div>
+                     <div class="carousel-item">
+                        <div class="image_main">
+                           <div class="container">
+                              <img src="{% static 'assets/images/basic3.jpg' %}" class="image_1">
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <a class="carousel-control-prev" href="#my_slider" role="button" data-slide="prev">
+                  <i class="fa fa-angle-left"></i>
+                  </a>
+                  <a class="carousel-control-next" href="#my_slider" role="button" data-slide="next">
+                  <i class="fa fa-angle-right"></i>
+                  </a>
+               </div>
+            </div>
+         </div>
+{% endblock %}

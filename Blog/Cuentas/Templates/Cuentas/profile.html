@@ -1,0 +1,51 @@
+{% extends "Main/base.html" %}
+{% block profile %}
+<!--html para editar los datos de la cuenta logeada -->
+<style>
+body {
+    font-family: "Roboto", sans-serif;
+    font-size: 18px;
+    background-color: #fdfdfd;
+}
+.card {
+    box-shadow: 0 16px 20px 000000
+    ;
+}
+</style>
+<div class="card mx-auto" style="width: 30rem;">
+        <div class="row my-3 p-3 mx-auto">
+            <span class="border border-primary">
+            <img class="rounded-0 account-img" src="{{ user.avatar }} " style="cursor: pointer;"/>
+            </span>
+        </div>
+        <div class="form-content">
+            <form method="POST" enctype="multipart/form-data">
+                {% csrf_token %}
+                <div class="form-row">
+                    <div class="col-md-5">
+                        <div class="form-group">
+                            <label class="small mb-2">Change Avatar:</label>
+                            {{ profile_form.avatar }}
+                        </div>
+                        <div class="form-group mx-5">
+                            <label class="small mb-1">Username:</label>
+                                {{ user_form.username }}
+                            <label class="small mb-1">Email:</label>
+                                {{ user_form.email }}
+                            <label class="small mb-1">Description:</label>
+                                {{ profile_form.description }}
+                            <label class="small mb-1">Social:</label>
+                                {{ profile_form.social1 }}
+                            <label class="small mb-1">Social:</label>
+                                {{ profile_form.social2 }}
+                        </div>
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-success btn-block">Save Changes</button>
+                <button type="reset" class="btn btn-dark btn-block">Reset</button>
+                <br><br>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock profile %}

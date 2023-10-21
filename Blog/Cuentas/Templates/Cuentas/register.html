@@ -1,0 +1,31 @@
+{% extends "main/base.html" %} {% load static %} {% block register %}
+<!--html para registrar nuevos usuarios -->
+<div class="card mx-auto" style="width: 15rem;">
+  <div class="row my-3 p-3 mx-auto">
+      <div class="form-content">
+      <form action="" method="POST">
+          {% csrf_token %}
+          <div class="form-row">
+              <div class="col-md-5">
+                  <div class="form-group">
+                    <label class="h5" "small mb-1">Username:</label>
+                      {{ form.username }}
+                    <label class="h5" "small mb-1">Email:</label>
+                      {{ form.email }}
+                    <label class="h5" "small mb-1">Password:</label>
+                      {{ form.password1 }}
+                    <label class="h6" "small mb-1">Confirm Password:</label>
+                      {{ form.password2 }}
+                    </div>
+                  </div>
+              </div>
+                  <button type="submit" class="btn btn-success btn-block">Login</button>
+                  {% if form.errors %}
+                  <p>Username taken</p>
+                  {% endif %}
+      </form>
+      </div>
+  </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,32 @@
+{% extends "main/base.html" %}
+{% block eliminar_blog %}
+{% if user.id == publicacion_model.author_id %}
+<!--html para eliminar un blog ya publicado-->
+<style>
+    body {
+        font-family: "Roboto", sans-serif;
+        font-size: 18px;
+        background-color: #fdfdfd;
+    }
+    .card {
+        box-shadow: 0 16px 20px 000000
+        ;
+    }
+</style>
+<form method="post">
+    {% csrf_token %}
+<div class="card mx-auto" style="width: 30rem;">
+    <div class="row my-3 p-3 mx-auto">
+        <h2>Estas seguro que deseas eliminar esta publicacion de blog?</h2>
+    <body>
+        <button type="submit" class"btn btn-success">delete</button>
+    <body>
+    </div>
+</div>
+{% else %}
+<div class="container">
+    <h5>Acceso denegado</h5>
+</div>
+{% endif %}
+
+{%endblock%}

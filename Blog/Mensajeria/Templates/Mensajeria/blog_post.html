@@ -1,0 +1,58 @@
+{% extends "main/base.html" %}
+{% block blog_post %}
+<!--html para visualizar los blogs publicados y tambien ver y publicar comentarios -->
+<div class="container mx-auto">
+    <div class="row">
+      <div class="col-md-8 card mb-4  mt-3 left  top">
+        <div class="card-body">
+          {% if post.imagen %}
+          <img src="{{ post.imagen.url }}" class="rounded featured-image-list" alt="{{post.title}}">
+          {% endif %}
+          <h1>{% block title %} {{ post.title }} {% endblock title %}</h1>
+          <h4>{% block subtitle %} {{ post.subtitle }} {% endblock subtitle %}</h4>
+          <p class=" text-muted">{{ post.author }} | {{ post.publication_date }}</p>
+          <p class="card-text mx-auto">{{ post.body | safe }}</p>
+          {% if user.id == post.author.id %}
+          <a href="{% url 'Blog_Edit' post.id %}" class="btn btn-success">Edit</a>
+          <a href="{% url 'Blog_Delete' post.id %}" class="btn btn-warning">Delete</a>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container mx-auto">
+  <div class="col-md-8 card mb-4 mt-3 left top ">
+    <div class="card-body">
+      <!-- comentarios --> 
+     <h2>{{ comments.count }} comments</h2>
+      {% for comment in comments %}
+      <div class="comments" style="padding: 10px;">
+        <p class="font-weight-bold"> 
+         {{ comment.name }}
+          <span class=" text-muted font-weight-normal">
+            {{ comment.author }} | {{ comment.publication_date }}
+          </span>
+        </p>
+        {{ comment.body | linebreaks }}
+      </div>
+      {% endfor %}
+    </div> 
+  </div>
+ </div>
+{% if request.user.is_authenticated %}
+<div class="container mx-auto">
+  <div class="col-md-8 card mb-4  mt-3 ">
+    <div class="card-body">
+        <h3>Leave a comment</h3>
+        <form method="post" style="margin-top: 1.3em;">
+        {{ comentarioform.body }}
+        {% csrf_token %}
+        <button type="submit" class="btn btn-success  btn-lg">Post</button>
+      </form>
+    </div>
+  </div>
+</div>
+{% endif %}
+</div>
+</div>
+{%endblock%}
