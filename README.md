@@ -47,8 +47,9 @@ notas:
 - Podrás editar tu perfil con avatar, descripción, username y redes sociales. También en la otra opción podrás cambiar tu password.
 - Para probar el admin se deberá crear un super user en visualstudiocode escribiendo en consola python manage.py createsuperuser
 - Luego deberás escribir este link http://127.0.0.1:8000/admin/ en el cual te logearas con el superuser creado antes.
-- Acá aparecerán varias categorías en las que podrás manejas a los usuarios registrados, sus perfiles(avatar), los blogs comentados y sus comentarios.
+- Acá aparecerán varias categorías en las que podrás manejar a los usuarios registrados, sus perfiles(avatar), los blogs comentados y sus comentarios.
 
 ## Pruebas Realizadas
+En este archivo excel estan algunas pruebas documentadas https://github.com/LucianoTT/ProyectoFinalPythonCoderHouse_TorresTonkowicz/blob/main/Pruebas%20Proyecto%20Python%20Codehouse.xlsx
 
 ## Video Demostración
