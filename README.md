@@ -22,6 +22,7 @@ Los usuarios podrán realizar las siguiente funciones:
 notas:
 - La opción de editar o borrar publicaciones solo está permitido para el autor o desde la página del admin.
 - El navegador que yo utilice para probar fue Google Chrome en modo incógnito.
+- El template utilizado fue este: https://www.free-css.com/free-css-templates/page283/bloscot
 
 ## Tecnología Utilizada
 
