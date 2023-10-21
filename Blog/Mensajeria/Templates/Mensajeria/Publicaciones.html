@@ -16,6 +16,7 @@
 <div class="container">
   <div class="row">
       <div class="col-md-8 mt-3 left">
+        {% if publicacion_model_list %}
           {% for post in publicacion_model_list %}
             <div class="card mb-4">
               <div class="card-body">
@@ -26,6 +27,9 @@
               </div>
             </div>
           {% endfor %}
+        {% else %}
+          </h5> no hay publicaciones actualmente <h5>
+        {% endif %}
       </div>
   </div>
   <p></p>
